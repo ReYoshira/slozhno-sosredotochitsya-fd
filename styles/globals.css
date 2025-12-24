@@ -40,3 +40,21 @@ a {
   font-size: inherit;
   line-height: inherit;
 }
+
+.primary-title {
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.card-link {
+  text-shadow: 2px 2px var(--accent-color_theme-dark);
+  text-decoration: none;
+}
+
+.card-link:hover{
+  text-decoration: underline;
+}
+
+.card-link:focus-visible{
+  outline: 1px solid var(--primary-text-color_theme-dark);
+}
