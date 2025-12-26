@@ -247,15 +247,16 @@
 
   .header_title {
     margin-block-start: 173px;
+    margin-inline-start:-20px ;
   }
 
   .header-text-container {
-    margin-block-start: 162px;
-    margin-inline-start: 384px;
+    margin-block-start: 165px;
+    margin-inline-start: 364px;
   }
 
   .triangle-bottom {
-    margin-block-start: 138px;
+    margin-block-start: 106px;
   }
 
   .main {
@@ -263,6 +264,7 @@
   }
 
   .main .content-section:nth-child(1) {
+    margin-block-start: 30px;
     grid-template-columns: repeat(3, 1fr);
   }
 
@@ -270,11 +272,17 @@
     grid-column: span 2;
   }
 
+    .main .content-section:nth-child(1) .cards-item-list .cards-item {
+    margin-inline-start: 8px;
+  }
+
   .main .content-section:nth-child(2) .content-title {
+    margin-block-start: 30px;
     margin-inline-end: 70%;
   }
 
   .main .content-section:nth-child(3) {
+    margin-block-start: 30px;
     grid-template-columns: repeat(3, 1fr);
   }
 
@@ -282,9 +290,25 @@
     grid-column: span 2;
   }
 
+  .main .content-section:nth-child(3) .cards-item-list .cards-item{
+    margin-inline-start: 8px;
+  }
+
+  .accent-title {
+    margin-inline-start: 8px;
+  }
+
   .content_pictures{
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 24px 1fr 1fr 1fr;
+    margin-block-start: 25px;
+    grid-template-columns: 
+    1fr 
+    1fr 
+    1fr;
+    grid-template-rows: 
+    24px
+    192px
+    234px 
+    318px;;
     gap:20px;
   }
 
@@ -294,6 +318,7 @@
 
   .image_sunset {
     min-block-size: 100%;
+    min-inline-size: 100%;
     object-fit: cover;
     grid-row:2;
     grid-column: span 2;
@@ -318,6 +343,7 @@
     grid-row: span 3;
   }
   .image_street {
+    min-inline-size: 100%;
     grid-column: span 2;
 }
 
@@ -327,10 +353,14 @@
   }
 
   .footer_title {
-    margin-block: 418px 417px;
+    margin-block: 400px;
   }
+  .triangle-top_footer{
+    margin-block-start: 0;
+  }
+
   .triangle-bottom_footer{
-    margin-block-end: 0;
+    margin-block-start: -12px;
   }
 }
 
