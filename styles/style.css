@@ -5,6 +5,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
   background-color: #000028;
   font-family: 'IBM Plex mono';
 }
@@ -13,11 +14,11 @@
 
 .header {
   display: grid;
-  grid-template-rows: repeat(5, min-content);
-  margin-block-start: 10px;
-  margin-inline: 10px;
+  grid-template-rows: auto auto 1fr auto auto;
   min-block-size:100vh;
   min-height: 668px;
+  margin-inline: 10px;
+  margin-block-start: 10px;
 }
 
 .triangle {
@@ -48,7 +49,7 @@
   position: absolute;
   color: var(--accent-color_theme-dark);
   font-size: 1.125rem;
-  right: 10%;
+  right: 40px;
 }
 
 .header__theme-menu{
@@ -92,11 +93,11 @@
 }
 
 .header-text-container {
-  margin-block-start: 57px;
+  background-color: var(--accent-color_theme-dark);
+  margin-block-end: 33px;
 }
 
 .header-text {
-  background-color: var(--accent-color_theme-dark);
   color: var(--accent-moody_theme-dark);
 }
 
@@ -104,7 +105,7 @@
   border-bottom: 1px solid var(--accent-color_theme-dark);
   border-left: 1px solid var(--accent-color_theme-dark);
   justify-self: start;
-  margin-block-start: 32px;
+  margin-block-end: 20px;
 }
 
 /*Блок Main*/
@@ -114,8 +115,8 @@
   flex-direction: column;
   background-color: var(--accent-moody_theme-dark);
   margin-block-start: 31px;
+  padding-inline: 10px;
 }
-
 
 /*Я не использовал gap, т.к. расстояние в макете между секциями неравномерное.*/
 .main .content-section:nth-child(1) {
@@ -123,17 +124,16 @@
 }
 
 .main .content-section:nth-child(2) {
-  margin-block-end: 54px;
+  margin-block-end: 51px;
 }
 
 .main .content-section:nth-child(3) {
-  margin-block-end: 52px;
+  margin-block-end: 53px;
 }
 
 .content-section{
   display: grid;
   gap:1.25rem;
-  margin-inline: 10px;
 }
 
 .cards-item-list{
@@ -179,7 +179,7 @@
   display: grid;
   grid-template-rows: 1fr;
   gap: 0.625rem;
-  margin-block-end: 30px;
+  margin-block-end: 50px;
 }
 
 .image {
@@ -187,14 +187,24 @@
   max-inline-size: 100%;
 }
 
+.image_ice-cream {
+  min-inline-size: 100%;
+}
+
+.image_books {
+   min-inline-size: 100%;
+}
+
 /*Footer*/
 
 .footer{
   display: grid;
   grid-template-rows: auto 1fr auto;
-  min-block-size: 100vh;  
-  margin-inline:10px;
-  margin-block:10px;
+  min-block-size: 100vh;
+  min-height: 668px;
+  background-color: var(--accent-moody_theme-dark);
+  padding-inline: 10px;
+  padding-block-end: 10px;
 }
 
 .footer_title{
@@ -214,5 +224,256 @@
 .triangle-bottom_footer {
   border-bottom: 1px solid var(--accent-color_theme-dark);
   border-left: 1px solid var(--accent-color_theme-dark);
+  margin-block-end: 20px;
+}
+
+/*Адаптив*/
+
+@media (width >= 768px) {
+  .header{
+    align-content: space-between;
+    grid-template-rows: repeat(5, auto);
+    margin-block-start: 20px;
+    margin-inline: 20px;
+  }
+
+  .triangle-top::before {
+    right: 50px;
+  }
+
+  .header__theme-menu {
+    margin-block-start: 146px;
+  }
+
+  .header_title {
+    margin-block-start: 173px;
+  }
+
+  .header-text-container {
+    margin-block-start: 162px;
+    margin-inline-start: 384px;
+  }
+
+  .triangle-bottom {
+    margin-block-start: 138px;
+  }
+
+  .main {
+    padding-inline: 20px;
+  }
+
+  .main .content-section:nth-child(1) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .main .content-section:nth-child(1) .cards-item-list {
+    grid-column: span 2;
+  }
+
+  .main .content-section:nth-child(2) .content-title {
+    margin-inline-end: 70%;
+  }
+
+  .main .content-section:nth-child(3) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .main .content-section:nth-child(3) .cards-item-list {
+    grid-column: span 2;
+  }
+
+  .content_pictures{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 24px 1fr 1fr 1fr;
+    gap:20px;
+  }
+
+  .content_pictures .card-title {
+    grid-column: span 3;
+  }
+
+  .image_sunset {
+    min-block-size: 100%;
+    object-fit: cover;
+    grid-row:2;
+    grid-column: span 2;
+  }
+
+  .image_ice-cream {
+    min-block-size: 100%;
+    object-fit: cover;
+    grid-row: span 2;
+    grid-column: 3;
+  }
+
+  .image_books {
+    min-block-size: 100%;
+    object-fit: cover;
+  }
+
+  .image_tape {
+    min-block-size: 97%;
+    object-fit: cover;
+    grid-column: 1;
+    grid-row: span 3;
+  }
+  .image_street {
+    grid-column: span 2;
+}
+
+  .footer {
+    padding-block-end: 20px;
+    padding-inline: 20px;
+  }
+
+  .footer_title {
+    margin-block: 418px 417px;
+  }
+  .triangle-bottom_footer{
+    margin-block-end: 0;
+  }
+}
+
+@media (width >= 1024px) {
+  .header{
+    grid-template-rows: 1fr 1fr 1fr 86px;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-content: space-between;
+    margin-block-start: 20px;
+    margin-inline: 20px;
+  }
+
+  .triangle-top{
+    grid-column: 3;
+  }
+  
+  .triangle-top::before {
+    right: 50px;
+  }
+
+  .header__theme-menu {
+    margin-block-start: 0;
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+
+  .header_title {
+    grid-row: 2;
+    grid-column: 1/ span 3;
+    margin-block-start:85px;
+    margin-inline-start: -20px;
+    font-size: 157px;
+  }
+
+  .header-text-container {
+    grid-row: 3;
+    grid-column: 2/ span 3;
+    justify-self: end;
+    align-self: center;
+    max-inline-size: 491px;
+    max-block-size: 71px;
+    margin-block: 0;
+    margin-inline: 0;
+    margin-block-start: 88px;
+  }
+
+  .triangle-bottom {
+    grid-row: 4;
+    align-self: end;
+    margin-block: 0;
+    margin-inline: 0;
+  }
+
+  .main .content-section:nth-child(1) {
+    margin-block-start: 50px;
+  }
+
+  .main .content-section:nth-child(2) {
+    margin-block-start: 30px;
+  }
+
+   .main .content-section:nth-child(2) .cards-item-list {
+    min-block-size: 431px;
+    flex-direction: row;
+   }
+
+  .main .content-section:nth-child(2) .cards-item-list .cards-item:nth-child(1) {
+    min-inline-size: 315px;
+   }
+
+  .main .content-section:nth-child(2) .cards-item-list .cards-item:nth-child(2) {
+    min-inline-size: 315px;
+   }
+  .main .content-section:nth-child(2) .cards-item-list .cards-item:nth-child(3) {
+    min-inline-size: 315px;
+   }
+
+  .main .content-section:nth-child(3) {
+    margin-block-start: 28px;
+  }
+
+  .content_pictures {
+    margin-block-start: 29px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 
+  24px
+  260px
+  315px 
+  433px;
+    gap:20px;
+  }
+
+ .image_sunset {
+    min-block-size: 100%;
+    min-inline-size: 100%;
+    object-fit: cover;
+  }
+
+  .image_ice-cream {
+    min-block-size: 100%;
+    object-fit: cover;
+
+  }
+
+  .image_books {
+    min-inline-size: 100%;
+    min-block-size: 100%;
+    object-position: center;
+    object-fit: cover;
+  }
+
+  .image_tape {
+    object-fit: cover;
+  }
+  .image_street {
+    min-block-size: 100%;
+    min-inline-size: 100%;
+    object-fit: cover;
+}
+
+.footer {
+  justify-content: none;
+  padding-block-end: 20px;
+  padding-inline: 20px;
+}
+
+.footer_title {
+  margin-block: 236px;
+  font-size: 157px;
+}
+
+.triangle-top_footer{
+  margin-block-start: 10px;
+}
+
+.triangle-bottom_footer{
+  margin-block-end: 0;
+}
 
 }
+
