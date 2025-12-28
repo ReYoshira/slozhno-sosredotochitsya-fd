@@ -5,14 +5,14 @@
 */
 
 :root.theme-dark {
-  --bg-img-theme:url(../images/cover-image-dark.png);
-  --accent-color:#FF0070;
-  --hero-title-color:#DB00FF;
+  --bg-img-theme: url(../images/cover-image-dark.png);
+  --accent-color: #ff0070;
+  --hero-title-color: #db00ff;
   --accent-moody: #000028;
-  --bg-color:#000028;
-  --primary-text-color: #F1B2CE;
-  --accent-color_menu-theme:var(--accent-color);
-  --accent-color_content-title:var(--accent-color);
+  --bg-color: #000028;
+  --primary-text-color: #f1b2ce;
+  --accent-color_menu-theme: var(--accent-color);
+  --accent-color_content-title: var(--accent-color);
   --decorative-display: block;
 }
 
@@ -21,7 +21,7 @@
   block-size: 6px;
   inline-size: 6px;
   background-color: var(--accent-color);
-  border-radius:50%;
+  border-radius: 50%;
   box-shadow: 0 0 8px 5px var(--accent-color);
   display: var(--decorative-display);
 }

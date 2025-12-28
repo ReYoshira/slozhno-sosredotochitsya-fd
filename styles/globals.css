@@ -51,10 +51,10 @@ a {
   text-decoration: none;
 }
 
-.card-link:hover{
+.card-link:hover {
   text-decoration: underline;
 }
 
-.card-link:focus-visible{
+.card-link:focus-visible {
   outline: 1px solid var(--primary-text-color_theme-dark);
 }
