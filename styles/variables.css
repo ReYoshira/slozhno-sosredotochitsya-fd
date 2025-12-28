@@ -1,9 +1,11 @@
 :root {
-  --bg-img-theme-dark:url(../images/cover-image-dark.png);
-  --bg-img-theme-light:url(../images/cover-image-light.png);
+  --bg-img-theme:url(../images/cover-image-dark.png);
   --bg-img:url(../images/cover-image.png);
-  --accent-color_theme-dark:#FF0070;
-  --hero-title-color_theme-dark:#DB00FF;
-  --accent-moody_theme-dark: #000028;
-  --primary-text-color_theme-dark: #F1B2CE;
+  --accent-color:#FF0070;
+  --hero-title-color:#DB00FF;
+  --accent-moody: #000028;
+  --bg-color:#000028;
+  --primary-text-color: #F1B2CE;
+  --accent-color_menu-theme:var(--accent-color);
+  --accent-color_content-title:var(--accent-color);
 }
