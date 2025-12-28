@@ -12,6 +12,7 @@
   --bg-color: #000028;
   --primary-text-color: #f1b2ce;
   --accent-color_menu-theme: var(--accent-color);
+  --hover-button:#FF007066;
   --accent-color_content-title: var(--accent-color);
   --decorative-display: block;
 }

@@ -61,7 +61,7 @@
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid var(--accent-color_menu-theme);
+  outline: 1px solid var(--hover-button);
 }
 
 .header__theme-menu-button:focus-visible {
@@ -150,6 +150,8 @@
 }
 
 .accent-title {
+  font-size: 1.125rem;
+  font-weight: bold;
   background-color: var(--accent-color);
   color: var(--accent-moody);
 }

@@ -12,6 +12,7 @@
   --bg-color: #fff;
   --primary-text-color: #353430;
   --accent-color_menu-theme: #353430;
+  --hover-button:#32312D66;;
   --accent-color_content-title: #353430;
   --decorative-display: none;
 }
@@ -25,6 +26,7 @@
     --bg-color: #fff;
     --primary-text-color: #353430;
     --accent-color_menu-theme: #353430;
+    --hover-button:#32312D66;;
     --accent-color_content-title: #353430;
     --decorative-display: none;
   }
