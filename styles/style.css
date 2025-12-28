@@ -150,6 +150,7 @@
 }
 
 .accent-title {
+  margin-block-end: 20px;
   font-size: 1.125rem;
   font-weight: bold;
   background-color: var(--accent-color);
@@ -352,14 +353,15 @@
   }
 
   .footer_title {
-    margin-block: 397px;
+    margin-block-start: -30px;
+    margin-block-end: 0;
   }
   .triangle-top_footer {
     margin-block-start: 0;
   }
 
   .triangle-bottom_footer {
-    margin-block-start: -12px;
+    margin-block-start: -40px;
     margin-block-end: 0px;
   }
 }
@@ -462,7 +464,7 @@
   }
 
   .content_pictures {
-    margin-block-start: 29px;
+    margin-block-start: 0;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows:
       24px
@@ -516,6 +518,7 @@
   }
 
   .triangle-bottom_footer {
+    margin-block-start: -12px;
     margin-block-end: 10px;
   }
 }

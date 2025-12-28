@@ -11,9 +11,9 @@
   --accent-moody: #000028;
   --bg-color: #000028;
   --primary-text-color: #f1b2ce;
-  --accent-color_menu-theme: var(--accent-color);
-  --hover-button:#FF007066;
-  --accent-color_content-title: var(--accent-color);
+  --accent-color_menu-theme: #ff0070;
+  --hover-button: rgba(255, 0, 112, 0.4);
+  --accent-color_content-title: #ff0070;
   --decorative-display: block;
 }
 
