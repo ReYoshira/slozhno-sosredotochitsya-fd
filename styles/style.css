@@ -20,7 +20,8 @@
 .header {
   display: grid;
   grid-template-rows: auto auto 1fr auto auto;
-  min-block-size: 100vh;
+  block-size: 100vh;
+  min-block-size: 667px;
   margin-inline: 10px;
   margin-block-start: 10px;
 }
@@ -198,7 +199,8 @@
 .footer {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  min-block-size: 100vh;
+  block-size: 100vh;
+  min-block-size: 667px;
   background-color: var(--bg-color);
   padding-inline: 10px;
 }
