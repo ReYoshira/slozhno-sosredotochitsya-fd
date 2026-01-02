@@ -17,21 +17,21 @@
   --decorative-display: block;
 }
 
-.triangle-top::after {
+.triangle-top_header::after {
   content: "";
   block-size: 6px;
   inline-size: 6px;
   background-color: var(--accent-color);
   border-radius: 50%;
-  box-shadow: 0 0 8px 5px var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--accent-color);
   display: var(--decorative-display);
 }
 
-.triangle-top::before {
+.triangle-top_header::before {
   content: "REC";
   position: absolute;
   color: var(--accent-color);
   font-size: 1.125rem;
-  right: 30px;
+  right: 28px;
   display: var(--decorative-display);
 }
