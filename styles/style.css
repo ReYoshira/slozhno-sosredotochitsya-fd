@@ -6,7 +6,9 @@
   background-attachment: fixed;
   background-size: cover;
   background-color: var(--bg-color);
-  font-family: "IBM Plex mono", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "IBM Plex mono", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
 }
 
 .header__theme-menu-button_active {
@@ -223,27 +225,32 @@
 
 @media (width >= 768px) {
   .header {
-    align-content: space-between;
+    align-content: stretch;
+    grid-template-rows: min-content 1fr 1fr 1fr auto;
     margin-block-start: 20px;
     margin-inline: 20px;
   }
 
   .header__theme-menu {
-    margin-block-start: 145px;
+    margin-block-start: 0;
+    place-self: end;
+    margin-block-end: 71px;
   }
 
   .header_title {
-    margin-block-end: 0;
-    margin-block-start: 175px;
+    place-self: center start;
+    margin-block-start: 0;
     margin-inline-start: -20px;
   }
 
   .header-text-container {
-    margin-block-end: 138px;
+    place-self: center;
+    margin-block-end: 82px;
     margin-inline-start: 364px;
   }
 
   .triangle-bottom_header {
+    place-self: end start;
     margin-block-end: 40px;
   }
 
@@ -313,6 +320,7 @@
 @media (width >= 1024px) {
   .header {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto 1fr auto auto;
     align-content: space-between;
     margin-block-start: 20px;
     margin-inline: 20px;
@@ -335,7 +343,7 @@
 
   .header_title {
     grid-column: span 3;
-    margin-block-start: 275px;
+    margin-block-start: 203px;
     margin-block-end: 23px;
     margin-inline-start: -20px;
     font-size: 157px;
@@ -354,11 +362,11 @@
   }
 
   .content-section {
-    gap:10px
+    gap: 10px;
   }
 
   .content-section_accent {
-    gap: 20px
+    gap: 20px;
   }
 
   .content-title_accent {
@@ -370,12 +378,12 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 
- .content_pictures {
-  gap: 20px;
- }
+  .content_pictures {
+    gap: 20px;
+  }
 
   .images {
-      grid-template-columns:
+    grid-template-columns:
       1fr
       1fr
       1fr;
@@ -390,5 +398,4 @@
   .footer_title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
-
 }
